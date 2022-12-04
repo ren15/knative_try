@@ -1,7 +1,8 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: hello
+  name: helloworld-go
+  namespace: default
 spec:
   template:
     metadata:
@@ -13,10 +14,7 @@ spec:
         autoscaling.knative.dev/max-scale: "100"
     spec:
       containers:
-        # - image: gcr.io/knative-samples/autoscale-go:0.1
-        - image: ghcr.io/ren15/knative_try/python-flask:latest
-          ports:
-            - containerPort: 8080
-          env:
-            - name: TARGET
-              value: "World"
+      - image: ghcr.io/ren15/knative_try/helloworld-go:latest
+        env:
+        - name: TARGET
+          value: "Go Sample v1"
