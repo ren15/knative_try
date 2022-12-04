@@ -13,3 +13,9 @@ Try if knative can have the same user experience as AWS Lambda
 5. deploy 
 6. load testing
 
+
+## Reference
+
+https://knative.dev/docs/getting-started/first-autoscale/#observe-autoscaling
+
+
