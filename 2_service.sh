@@ -1,3 +1,3 @@
-kubectl apply -f hello.yaml
+kubectl apply -f app/helloworld-go/service.yaml
 
 kn service list
